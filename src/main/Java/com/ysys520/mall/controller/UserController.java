@@ -76,8 +76,6 @@ public class UserController {
         if (username != null && password != null) {
             User user = iUserService.loginUser(username, password);
             if (user != null) {
-//                result = mGson.toJson(new Result(0, "登陆成功", new Date().toString()));
-//                returnResult(response, result);
                 return new Result(0, "登陆成功", new Date().toString());
             } else {
                 result = mGson.toJson(new Result(1, "登录失败", new Date().toString()));
